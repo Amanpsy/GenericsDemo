@@ -8,34 +8,32 @@ namespace GenericsDemo
 {
     internal class Program
     {
-
-        
-       public static void Toprint(double[] inputarray)
+        public static void Toprint<T>(T[] inputarray)
         {
-            foreach (double element in inputarray)
+            foreach( var element in inputarray )
             {
                 Console.WriteLine(element);
+            
             }
-        Console.WriteLine("--------------------");
-        }
-
-        public static void Toprint(char[] inputarray)
-        {
-            foreach(char element in inputarray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("---------------------");
+            Console.WriteLine("------------------");
 
         }
+
+
+   
+       
         static void Main(string[] args)
         {
-            double[]IntArray = {1.2,1.3,1.4,1.6};
+            double[]DoubleArray = {1.2,1.3,1.4,1.6};
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
+            int[] intArray = { 0, 1, 2, 3, 4 };          
+           
 
-          
-            Program.Toprint(IntArray);
-            Program.Toprint(charArray);
+        Program.Toprint<int>(intArray);
+        Program.Toprint<Char>(charArray);
+        Program.Toprint<Double>(DoubleArray);
+
+
 
         }
 
