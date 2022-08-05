@@ -25,7 +25,7 @@ namespace GenericsDemo
             {
                 Console.WriteLine(element);
             }
-            Console.WriteLine("-------------------------");
+            Console.WriteLine("---------------------");
 
         }
         static void Main(string[] args)
